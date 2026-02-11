@@ -12,7 +12,7 @@
 
 **A comprehensive, modern web interface for restaurant management built with cutting-edge technologies.**
 
-[Features](#-features) • [Demo](#-demo) • [Installation](#-installation) • [Documentation](#-documentation) • [Screenshots](#-screenshots)
+[Features](#-features) • [Demo](#-demo) • [Installation](#-installation) • [Documentation](#-documentation)
 
 </div>
 
@@ -23,7 +23,6 @@
 - [Overview](#-overview)
 - [Features](#-features)
 - [Tech Stack](#️-tech-stack)
-- [Screenshots](#-screenshots)
 - [Architecture](#-architecture)
 - [Role-Based Access](#-role-based-access-control)
 - [Getting Started](#-getting-started)
@@ -124,40 +123,6 @@
 - **ESLint** - Code linting and quality
 - **PostCSS** - CSS processing
 - **Turbopack** - Fast development builds
-
----
-
-## 📸 Screenshots
-
-### Login Page
-![Login Page](public/screenshots/login.png)
-*Secure authentication with beautiful gradient design*
-
-### Dashboard - Manager View
-![Manager Dashboard](public/screenshots/dashboard-manager.png)
-*Comprehensive dashboard with role-based navigation*
-
-### Dashboard - Chef View
-![Chef Dashboard](public/screenshots/dashboard-chef.png)
-*Streamlined interface for kitchen staff*
-
-### Kitchen Display System
-![Kitchen Orders](public/screenshots/kitchen-orders.png)
-*Real-time order tracking for kitchen operations*
-
-### Menu Management
-![Menu Items](public/screenshots/menu-items.png)
-*Easy-to-use menu item management interface*
-
-### Table Management
-![Tables](public/screenshots/tables.png)
-*Visual table layout and status management*
-
-### Order Management
-![Orders](public/screenshots/orders.png)
-*Complete order processing workflow*
-
-> **Note**: To capture these screenshots for your repository, please refer to [SCREENSHOTS.md](SCREENSHOTS.md) for detailed instructions.
 
 ---
 
