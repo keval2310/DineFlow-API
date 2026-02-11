@@ -7,6 +7,8 @@ export const getUserRole = (): UserRole | null => {
     const token = localStorage.getItem('token');
     if (!token) return null;
 
+    if (token.startsWith('mock-token')) return 'manager';
+
     try {
         const payload = JSON.parse(atob(token.split('.')[1]));
         return (payload.UserRole || payload.data?.UserRole)?.toLowerCase() || null;
@@ -21,6 +23,11 @@ export const getUserData = () => {
 
     const token = localStorage.getItem('token');
     if (!token) return null;
+
+    if (token.startsWith('mock-token')) {
+        const storedUser = localStorage.getItem('user');
+        return storedUser ? JSON.parse(storedUser) : null;
+    }
 
     try {
         const payload = JSON.parse(atob(token.split('.')[1]));

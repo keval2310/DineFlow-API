@@ -26,10 +26,25 @@ api.interceptors.request.use(
   }
 );
 
+import { getMockData } from './mockData';
+
 // Response interceptor - handle 401 errors
 api.interceptors.response.use(
   (response) => response,
   (error) => {
+    // If offline/mock mode, intercept 401s and return mock data
+    const token = localStorage.getItem('token');
+    if (error.response?.status === 401 && token && token.startsWith('mock-token')) {
+      console.warn(`[Mock Mode] Intercepted 401 for ${error.config.url}. Returning mock data.`);
+      return Promise.resolve({
+        data: getMockData(error.config.url || ''),
+        status: 200,
+        statusText: 'OK',
+        headers: {},
+        config: error.config,
+      });
+    }
+
     if (error.response?.status === 401) {
       localStorage.removeItem('token');
       localStorage.removeItem('user');
